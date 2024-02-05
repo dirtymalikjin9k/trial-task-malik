@@ -17,28 +17,35 @@ model User {
   password String?  @db.VarChar(255)
   address  String?  @db.VarChar(255)
   Layout   Layout[]
+
+  @@index([email, address])
 }
 
 model Layout {
-  layout_id   Int     @id @default(autoincrement())
+  layout_id   Int                @id @default(autoincrement())
   user_id     Int
-  layout_name String? @db.VarChar
-  user        User    @relation(fields: [user_id], references: [user_id])
-  widgets WidgetsOnLayouts[]
+  layout_name String?            @db.VarChar
+  user        User               @relation(fields: [user_id], references: [user_id])
+  widgets     WidgetsOnLayouts[]
+
+  @@index([user_id])
 }
 
 model Widget {
-  widget_id          Int     @id @default(autoincrement())
-  widget_name        String? @db.VarChar(255)
-  widget_description String  @db.Text
-  layouts WidgetsOnLayouts[]
+  widget_id            Int                @id @default(autoincrement())
+  widget_name          String?            @db.VarChar(255)
+  widget_description   String             @db.Text
+  layouts              WidgetsOnLayouts[]
+  widget_configuration String             @db.Text
+
+  @@index([widget_id])
 }
 
 model WidgetsOnLayouts {
   layout_id Int
-  layout Layout @relation(fields: [layout_id], references:[layout_id])
+  layout    Layout @relation(fields: [layout_id], references: [layout_id])
   widget_id Int
-  widget Widget @relation(fields: [widget_id], references: [widget_id])
+  widget    Widget @relation(fields: [widget_id], references: [widget_id])
 
   @@id([layout_id, widget_id])
 }
