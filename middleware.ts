@@ -1,9 +1,6 @@
-import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs'
-import { NextRequest, NextResponse } from 'next/server'
+export { auth as middleware } from "auth"
 
-export async function middleware(req: NextRequest) {
-    const res = NextResponse.next();
-    const supabase = createMiddlewareClient({ req, res });
-    await supabase.auth.getSession();
-    return res
-};
+// Read more: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+}
