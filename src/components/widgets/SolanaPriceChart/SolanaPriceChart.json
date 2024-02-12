@@ -1,0 +1,25 @@
+{
+  "info": {
+    "wid": "solanachart",
+    "name": "Solana Price Chart",
+    "thumbnail": "/thumbnail-stock.png",
+    "w": 2,
+    "h": 2
+  },
+  "schema": {
+    "symbol": {
+      "label": "Symbol",
+      "type": "text",
+      "placeholder": "Stock Symbol",
+      "autoFocus": true,
+      "validation": {
+        "required": "Symbol is required",
+        "minLength": {
+          "value": 1,
+          "message": "Symbol should have at least 1 character"
+        }
+      }
+    }
+  }
+
+}

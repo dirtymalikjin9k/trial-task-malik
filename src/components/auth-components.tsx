@@ -12,17 +12,17 @@ export function SignIn({
         await signIn(provider)
       }}
     >
-      <Button {...props}>Sign In</Button>
+      <Button {...props}>Sign In</Button> 
     </form>
   )
 }
 
 export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
-  return (
+  return (  
     <form
       action={async () => {
         "use server"
-        await signOut()
+        await signOut({redirectTo: "/", redirect: true})
       }}
       className="w-full"
     >
