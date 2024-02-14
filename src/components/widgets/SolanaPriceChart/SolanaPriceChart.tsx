@@ -1,9 +1,9 @@
 import { memo, useEffect, useState } from 'react';
 import json from './SolanaPriceChart.json';
-import Widget from '../../components/Widget/Widget';
-import { WidgetWidth } from '../../utils/constants';
-import { PubSubEvent, useSub } from '../../hooks/usePubSub';
-import { hToPx } from '../../utils/appUtils';
+import Widget from '@/components/Widget/Widget';
+import { WidgetWidth } from '@/lib/constants';
+import { PubSubEvent, useSub } from '@/hooks/usePubSub';
+import { hToPx } from '@/lib/appUtils';
 import { CartesianGrid, Legend, Line, LineChart, XAxis, YAxis } from 'recharts';
 import axios from 'axios';
 import { Tooltip } from 'react-tooltip';

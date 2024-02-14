@@ -1,8 +1,8 @@
 import { memo, useMemo, useState } from 'react';
 import json from './Embed.json';
-import Widget from '../../components/Widget/Widget';
-import { WidgetHeight, WidgetWidth } from '../../utils/constants';
-import { hToPx } from '../../utils/appUtils';
+import Widget from '@/components/Widget/Widget';
+import { WidgetHeight, WidgetWidth } from '@/lib/constants';
+import { hToPx } from '@/lib/appUtils';
 
 type Props = {
   wid: string;

@@ -1,8 +1,8 @@
 import { memo, useEffect, useState } from 'react';
 import json from './Note.json';
-import Widget from '../../components/Widget/Widget';
-import { useDebounce } from '../../components/base';
-import { useWidgetSettings } from '../../hooks/useWidgetSettings';
+import Widget from '@/components/Widget/Widget';
+import { useDebounce } from '@/components/base';
+import { useWidgetSettings } from '@/hooks/useWidgetSettings';
 
 type Props = {
   wid: string;

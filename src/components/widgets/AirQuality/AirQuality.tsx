@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useWidgetSettings } from '../../hooks/useWidgetSettings';
+import { useWidgetSettings } from '@/hooks/useWidgetSettings';
 import json from './AirQuality.json';
-import { apiGet } from '../../utils/apiUtils';
-import { KeyValueString } from '../../../types';
-import Widget from '../../components/Widget/Widget';
+import { apiGet } from '@/lib/apiUtils';
+import { KeyValueString } from '@/types';
+import Widget from '@/components/Widget/Widget';
 
 type Props = {
   wid: string;

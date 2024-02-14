@@ -6,10 +6,10 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LabelList } from 'recharts';
 import { zonedTimeToUtc, format } from 'date-fns-tz';
-import { apiGet } from '../../utils/apiUtils';
-import { useAppContext } from '../../hooks/useAppContext';
-import { KeyValueString } from '../../../types';
-import { WidgetHeight, WidgetWidth } from '../../utils/constants';
+import { apiGet } from '@/lib/apiUtils';
+import { useAppContext } from '@/hooks/useAppContext';
+import { KeyValueString } from '@/types';
+import { WidgetHeight, WidgetWidth } from '@/lib/constants';
 
 // // Your project mapping data
 // const projectMappingData = [

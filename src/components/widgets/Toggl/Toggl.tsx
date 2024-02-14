@@ -1,6 +1,6 @@
 import TogglProjectBarChart from './TogglProjectBarChart';
 import json from './Toggl.json';
-import Widget from '../../components/Widget/Widget';
+import Widget from '@/components/Widget/Widget';
 
 type Props = {
   wid: string;

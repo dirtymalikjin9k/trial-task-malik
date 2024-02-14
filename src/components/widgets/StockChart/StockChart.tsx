@@ -1,10 +1,10 @@
 import { memo, useState } from 'react';
 import { SymbolOverview } from 'react-tradingview-embed';
 import json from './StockChart.json';
-import Widget from '../../components/Widget/Widget';
-import { WidgetWidth } from '../../utils/constants';
-import { PubSubEvent, useSub } from '../../hooks/usePubSub';
-import { hToPx } from '../../utils/appUtils';
+import Widget from '@/components/Widget/Widget';
+import { WidgetWidth } from '@/lib/constants';
+import { PubSubEvent, useSub } from '@/hooks/usePubSub';
+import { hToPx } from '@/lib/appUtils';
 
 type Props = {
   wid: string;

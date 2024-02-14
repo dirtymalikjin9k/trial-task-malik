@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Clock.css';
-import { getNumber } from '../../utils/appUtils';
+import { getNumber } from '@/lib/appUtils';
 
 type Props = {
   title: string;

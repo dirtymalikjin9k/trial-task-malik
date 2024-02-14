@@ -1,10 +1,10 @@
 import { memo, useEffect, useState } from 'react';
 import { SymbolOverview } from 'react-tradingview-embed';
 import json from './OrderBook.json';
-import Widget from '../../components/Widget/Widget';
-import { WidgetWidth } from '../../utils/constants';
-import { PubSubEvent, useSub } from '../../hooks/usePubSub';
-import { hToPx } from '../../utils/appUtils';
+import Widget from '@/components/Widget/Widget';
+import { WidgetWidth } from '@/lib/constants';
+import { PubSubEvent, useSub } from '@/hooks/usePubSub';
+import { hToPx } from '@/lib/appUtils';
 import { FiFilter, FiSearch } from 'react-icons/fi';
 import { RiBillLine } from 'react-icons/ri';
 import Popup from 'reactjs-popup';
@@ -43,25 +43,24 @@ export default function OrderBook({ wid }: Props) {
               <FiFilter color='#fff' />
             </button>} position="right center">
               {
-                (close: any) => {
-                  return <div style={{
-                    background: "rgba(59,130,246,.5)",
-                    borderRadius: "5px",
-                    padding: "15px"
-                  }}>
-                    <ul>
-                      <span className='font-bold'>TYPE</span>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Swap</li>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Snipe</li>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Advanced</li>
-                      <hr />
-                      <span className='font-bold'>STATUS</span>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Success</li>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Error</li>
-                      <li onClick={() => onMenuClick(0, close)}><Checkbox />Idle</li>
-                    </ul>
-                  </div>
-                }
+                <div style={{
+                  background: "rgba(59,130,246,.5)",
+                  borderRadius: "5px",
+                  padding: "15px"
+                }}>
+                  <ul>
+                    <span className='font-bold'>TYPE</span>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Swap</li>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Snipe</li>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Advanced</li>
+                    <hr />
+                    <span className='font-bold'>STATUS</span>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Success</li>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Error</li>
+                    <li onClick={() => onMenuClick(0, close)}><Checkbox />Idle</li>
+                  </ul>
+                </div>
+
               }
 
             </Popup>

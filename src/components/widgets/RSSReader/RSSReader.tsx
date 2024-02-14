@@ -1,10 +1,10 @@
 import json from './RSSReader.json';
-import Widget from '../../components/Widget/Widget';
+import Widget from '@/components/Widget/Widget';
 import { useEffect, useState } from 'react';
-import { apiGet } from '../../utils/apiUtils';
+import { apiGet } from '@/lib/apiUtils';
 import { FiRefreshCcw } from 'react-icons/fi';
 import _ from 'lodash';
-import { useWidgetSettings } from '../../hooks/useWidgetSettings';
+import { useWidgetSettings } from '@/hooks/useWidgetSettings';
 
 type Props = {
   wid: string;

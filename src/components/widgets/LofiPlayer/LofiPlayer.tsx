@@ -1,6 +1,6 @@
 import { memo, useMemo, useState } from 'react';
 import json from './LofiPlayer.json';
-import Widget from '../../components/Widget/Widget';
+import Widget from '@/components/Widget/Widget';
 
 type Props = {
   wid: string;

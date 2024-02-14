@@ -1,9 +1,9 @@
 import { memo, useMemo, useState } from 'react';
 import { MiniChart, SymbolOverview } from 'react-tradingview-embed';
 import json from './StockMini.json';
-import Widget from '../../components/Widget/Widget';
-import { WidgetHeight, WidgetWidth } from '../../utils/constants';
-import { PubSubEvent, useSub } from '../../hooks/usePubSub';
+import Widget from '@/components/Widget/Widget';
+import { WidgetHeight, WidgetWidth } from '@/lib/constants';
+import { PubSubEvent, useSub } from '@/hooks/usePubSub';
 
 type Props = {
   wid: string;
